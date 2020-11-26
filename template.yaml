@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  automicrestapi:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: .
+      Description: 'This function can be used to send AWS Events to the automic rest interface'
+      MemorySize: 128
+      Timeout: 10
+      Environment:
+        Variables:
+          ae_rest_endpoint: 'https://rest.35.244.234.8.xip.io/ae/api/v1/100'
+          ae_workflow: 'JOBP.AWS_LAMBDA.S3'
+          username: '100/AUTOMIC/AUTOMIC'
+          password: ''
