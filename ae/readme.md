@@ -26,3 +26,14 @@ Required Steps:
 * Its Ready
 
 Here are the individual actions you need to take.
+
+## Serverless App: Automic Automation REST API
+To make it easy for you to use this integration, I published a small Function to AWS Lambda that can be easily configured to send any AWS Event in Lambda as a JSON payload to the Automic  Automation REST API.
+
+## Automic Automation Engine: Objects to process S3 event 
+Let’s start by creating the required objects to receive the S3 json event and write it to a static VARA object for further processing in the Automation Engine.
+
+You can use the provided export which contains these objects:
+![alt text](https://raw.githubusercontent.com/tuct/automic-lambda/main/ae/assets/ae_content.png "AE content example")
+
+
