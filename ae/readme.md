@@ -33,7 +33,7 @@ To make it easy for you to use this integration, I published a small Function to
 ## Automic Automation Engine: Objects to process S3 event 
 Let’s start by creating the required objects to receive the S3 json event and write it to a static VARA object for further processing in the Automation Engine.
 
-You can use the provided export which contains these objects:
+You can use the provided export "aws_lambda_ae_content.xml" which contains these objects:
 ![alt text](https://raw.githubusercontent.com/tuct/automic-lambda/main/ae/assets/ae_content.png "AE content example")
 
 The workflow JOBP.AWS_LAMBDA.S3 is very simple, it uses the Promptset
@@ -44,7 +44,7 @@ and one script SCRI.ADD_FILE_TO_PROCESS that will parse the json into AE variabl
 ![alt text](https://raw.githubusercontent.com/tuct/automic-lambda/main/ae/assets/ae_scri_3.png "Script")
 and writes the file to the static Vara VARA.S3.FILES_TO_PROCESS for further processing.
 
-The test_payload.json file contains a json payload for a S3 put request to a bucket that can be
+The "test_payload.json" file contains a json payload for a S3 put request to a bucket that can be
 used to test the workflow.
 
 ### AWS S3 bucket
